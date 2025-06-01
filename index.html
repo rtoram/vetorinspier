@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Converter PNG para SVG</title>
-    <!-- Carregar o script Potrace do CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/potrace@2.1.8/potrace.min.js"></script>
+    <!-- Carregar o script Potrace do arquivo local -->
+    <script src="potrace.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -87,7 +87,7 @@
         window.onload = function() {
             console.log("Página carregada. Verificando Potrace...");
             if (typeof Potrace === 'undefined') {
-                showError('Erro: A biblioteca Potrace não foi carregada. Verifique sua conexão ou hospede o script localmente.');
+                showError('Erro: A biblioteca Potrace não foi carregada. Verifique se o arquivo potrace.min.js está no repositório e o caminho está correto.');
                 document.getElementById('convertButton').disabled = true;
             } else {
                 console.log("Potrace carregado com sucesso!");
